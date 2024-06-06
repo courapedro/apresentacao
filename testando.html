@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pedro Coura</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/0/805.png">
+    <style>
+        body {
+            background: #fff;
+            color: #333;
+            font-family: "San Francisco", "Helvetica Neue", Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            transition: background 0.5s, color 0.5s;
+        }
+        body.dark-mode {
+            background: #333;
+            color: #fff;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.872);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 5px 0;
+        }
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar li {
+            margin: 0 20px;
+            position: relative;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ffffff;
+        }
+        .menu {
+            display: none;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.872);
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+        }
+        .navbar li:hover .menu {
+            display: block;
+        }
+        .menu a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        .menu a:hover {
+            color: #000000;
+        }
+        .brand {
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s;
+        }
+        .social-icons {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 2.0rem;
+            text-decoration: none;
+            transition: transform 0.3s;
+            color: #333;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+        }
+        .social-icons.dark-mode a {
+            color: #fff;
+        }
+        .bio {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .profile-image {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -35%);
+        }
+        .home-link {
+            position: relative;
+            left: -820px;
+        }
+        #dark-mode-toggle {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            width: 20px;
+            height: 20px;
+            background: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background 0.1s, transform 0.1s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Estilos para o ícone de localização */
+        .location-icon {
+            font-size: 2.0rem;
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            cursor: pointer;
+            color: #333;
+            transition: color 0.3s;
+        }
+
+        .location-icon.dark-mode a {
+            color: #fff;
+        }
+
+        .location-icon:hover + .location-info {
+            display: block;
+        }
+
+        /* Estilos para a informação de localização */
+        .location-info {
+            display: none;
+            position: absolute;
+            bottom: 75px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        /* Estilos para ícones no modo escuro */
+        body.dark-mode .social-icons a {
+            color: #fff;
+            text-shadow: 0px -2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombreado na parte inferior */
+        }
+
+        body.dark-mode .location-icon {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li>
+                <a href="#inicio" class="home-link"><i class="fas fa-home"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div id="dark-mode-toggle" class="icon-container">
+        <i class="fas fa-lightbulb"></i> <!-- Ícone de lâmpada -->
+    </div>
+    <div class="brand">Pedro Coura</div>
+    <img class="profile-image" src="https://th.bing.com/th/id/OIG.CMUytYe2aQbE7rZgLOe6?w=270&h=270&c=6&r=0&o=5&dpr=2&pid=ImgGn" alt="Foto de Perfil Padrão">
+    
+    <!-- Ícone de localização -->
+    <i class="fas fa-map-marker location-icon"></i>
+    <!-- Informação de localização -->
+    <div class="location-info">Belo Horizonte - MG</div>
+
+    <div class="social-icons">
+        <a href="https://github.com/courapedro" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/-pedrocoura" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/31993949509" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/_pedrocoura" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://spotify.link/ztdmF8hi2Db" target="_blank"><i class="fab fa-spotify"></i></a>
+    </div>
+    <div class="bio">Graduando em Engenharia pela Universidade Federal de Minas Gerais</div>
+
+    <script>
+        const body = document.body;
+        const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+        darkModeToggle.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+
+            if (darkModeToggle.classList.contains("moon")) {
+                darkModeToggle.style.backgroundColor = "#fff";
+                darkModeToggle.classList.remove("moon");
+            } else {
+                darkModeToggle.style.backgroundColor = "#333";
+                darkModeToggle.classList.add("moon");
+            }
+        });
+    </script>
+</body>
+</html>
