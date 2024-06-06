@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pedro Coura</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/0/805.png">
@@ -81,11 +83,11 @@
             bottom: 10px;
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
         }
         .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-            font-size: 2.0rem;
+            font-size: 1.5rem;
             text-decoration: none;
             transition: transform 0.3s;
             color: #333;
@@ -98,20 +100,19 @@
         }
         .bio {
             position: absolute;
-            top: 50%;
+            top: 60%;
             left: 50%;
             transform: translate(-50%, -50%);
+            padding: 0 10px;
         }
         .profile-image {
-            position: absolute;
-            top: 30px;
-            left: 30px;
-            width: 150px;
-            height: 150px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            top: 30%;
+            position: absolute;
+            top: 20%;
             left: 50%;
-            transform: translate(-50%, -35%);
+            transform: translate(-50%, -20%);
         }
         .home-link {
             position: relative;
@@ -131,10 +132,8 @@
             align-items: center;
             justify-content: center;
         }
-
-        /* Estilos para o ícone de localização */
         .location-icon {
-            font-size: 2.0rem;
+            font-size: 1.5rem;
             position: absolute;
             bottom: 20px;
             right: 20px;
@@ -142,16 +141,12 @@
             color: #333;
             transition: color 0.3s;
         }
-
         .location-icon.dark-mode a {
             color: #fff;
         }
-
         .location-icon:hover + .location-info {
             display: block;
         }
-
-        /* Estilos para a informação de localização */
         .location-info {
             display: none;
             position: absolute;
@@ -163,15 +158,40 @@
             padding: 5px;
             border-radius: 5px;
         }
-
-        /* Estilos para ícones no modo escuro */
         body.dark-mode .social-icons a {
             color: #fff;
-            text-shadow: 0px -2px 4px rgba(0, 0, 0, 0.7); /* Adiciona sombreado na parte inferior */
+            text-shadow: 0px -2px 4px rgba(0, 0, 0, 0.7);
         }
-
         body.dark-mode .location-icon {
             color: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .navbar a {
+                font-size: 1rem;
+            }
+            .brand {
+                font-size: 1.2rem;
+                top: 40%;
+            }
+            .profile-image {
+                width: 80px;
+                height: 80px;
+            }
+            .social-icons {
+                gap: 5px;
+            }
+            .social-icons a {
+                font-size: 1.2rem;
+            }
+            .bio {
+                top: 70%;
+                font-size: 0.9rem;
+                padding: 0 20px;
+            }
+            .location-icon {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
@@ -184,16 +204,12 @@
         </ul>
     </div>
     <div id="dark-mode-toggle" class="icon-container">
-        <i class="fas fa-lightbulb"></i> <!-- Ícone de lâmpada -->
+        <i class="fas fa-lightbulb"></i>
     </div>
     <div class="brand">Pedro Coura</div>
     <img class="profile-image" src="1717080751268.jpeg" alt="Foto de Perfil Padrão">
-    
-    <!-- Ícone de localização -->
     <i class="fas fa-map-marker location-icon"></i>
-    <!-- Informação de localização -->
     <div class="location-info">Belo Horizonte - MG</div>
-
     <div class="social-icons">
         <a href="https://github.com/courapedro" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/-pedrocoura" target="_blank"><i class="fab fa-linkedin"></i></a>
